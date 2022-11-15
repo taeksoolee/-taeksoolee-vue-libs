@@ -1,5 +1,1 @@
-import HaezoomLayout from "./HaezoomLayout.vue";
-
-export default {
-  HaezoomLayout
-}
+export { default as HaezoomLayout } from './HaezoomLayout.vue';

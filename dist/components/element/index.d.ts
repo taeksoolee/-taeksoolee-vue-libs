@@ -1,4 +1,2 @@
-declare const _default: {
-    Button: any;
-};
-export default _default;
+export { default as Button } from './Button.vue';
+//# sourceMappingURL=index.d.ts.map
