@@ -1,0 +1,37 @@
+{
+  "name": "haezoom-design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.mjs",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
+  "jsnext:main": "dist/index.esm.mjs",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@vue/compiler-sfc": "^3.2.45",
+    "@vue/composition-api": "^1.7.1",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "amazon-cognito-identity-js": "^5.2.12",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-ts": "^3.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

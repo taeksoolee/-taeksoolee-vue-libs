@@ -1,0 +1,2 @@
+!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(require("vue"),require("@vue/composition-api")):"function"==typeof define&&define.amd?define(["vue","@vue/composition-api"],o):o((e="undefined"!=typeof globalThis?globalThis:e||self).vue,e.compositionApi)}(this,(function(e,o){"use strict";var n=o.defineComponent({setup(){}});n.render=function(o,n,i,t,u,p){return e.openBlock(),e.createElementBlock("div",null,"Hello World")},n.__file="src/components/Layout/HaezoomLayout.vue",e.createApp({})}));
+//# sourceMappingURL=index.umd.js.map
