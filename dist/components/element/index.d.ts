@@ -1,1 +1,4 @@
-export { default as Button } from './Button.vue';
+declare const _default: {
+    Button: any;
+};
+export default _default;

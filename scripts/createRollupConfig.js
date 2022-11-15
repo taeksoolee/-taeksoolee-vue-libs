@@ -4,8 +4,10 @@ import sourcemaps from "rollup-plugin-sourcemaps";
 import { terser } from "rollup-plugin-terser";
 import typescript from "rollup-plugin-typescript2";
 import vuePlugin from 'rollup-plugin-vue';
-import multi from '@rollup/plugin-multi-entry';
 // import { AmazonCognitoIdentity } from 'amazon-cognito-identity-js';
+
+import dts from 'rollup-plugin-dts'
+import esbuild from 'rollup-plugin-esbuild'
 
 export function createRollupConfig(options, callback) {
   const name = options.name;
@@ -14,16 +16,18 @@ export function createRollupConfig(options, callback) {
   const extName = options.format === "esm" ? "mjs" : "js";
   // const outputName = 'dist/' + [name, options.format, extName].join('.');
 
-  // const outputName = "dist/" + [name, options.format, extName].join(".");
+  const outputName = "dist/" + [name, options.format, extName].join(".");
 
   const config = {
     input: options.input,
     output: {
       name: "haezoom-design-system",
-      dir: "./dist",
-      // file: outputName,
-      // format: options.format,
-      // sourcemap: true,
+      file: outputName,
+      format: options.format,
+      sourcemap: true,
+      ...(options.format === 'cjs' ? {
+        exports: 'default',
+      } : {}),
       globals: { 
         "vue": "vue",
         "@vue/composition-api": "compositionApi",
@@ -34,7 +38,6 @@ export function createRollupConfig(options, callback) {
       vuePlugin({
         
       }),
-      multi(),
       external({
         includeDependencies: [
           '@vue/composition-api',
@@ -48,7 +51,8 @@ export function createRollupConfig(options, callback) {
         commonjs({
           include: /\/node_modules\//,
         }),
-        
+        options.format === "cjs" && esbuild(),
+        options.format === "esm" && dts(),
       sourcemaps(),
       options.format !== "esm" &&
         terser({

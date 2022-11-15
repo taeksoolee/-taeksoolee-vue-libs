@@ -1,5 +1,10 @@
 console.log('hello world');
 
-import './components/layout'
-import './components/element'
+import layout from './components/layout'
+import element from './components/element'
 // const app = createApp();
+
+export default {
+  layout,
+  element
+}

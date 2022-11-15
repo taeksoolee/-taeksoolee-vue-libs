@@ -1,27 +1,29 @@
-import pkg from './package.json';
-import { createRollupConfig } from './scripts/createRollupConfig';
+import dts from 'rollup-plugin-dts'
+import esbuild from 'rollup-plugin-esbuild'
+import vuePlugin from 'rollup-plugin-vue';
 
-const name = 'index';
-const options = [
+export default [
   {
-    name,
-    // format: 'cjs',
-    // input: pkg.source,
-    input: {
-      include: ['src/**/*.ts', 'src/**/*.vue'],
-      exclude: ['src/**/*.d.ts']
-    }
+    input: `src/components/element/index.ts`,
+    plugins: [
+      vuePlugin(),
+      esbuild()
+    ],
+    output: [
+      {
+        file: `dist/components/element/index.js`,
+        format: 'cjs',
+        sourcemap: true,
+        exports: 'default',
+      },
+    ]
   },
-  // { name, format: 'esm', 
-  //   // input: pkg.source 
-  //   input: 'src/**/*.(vue|ts)'
-  // },
-  // {
-  //   name,
-  //   format: 'umd',
-  //   // input: pkg.source,
-  //   input: 'src/**/*.(vue|ts)'
-  // },
-];
-
-export default options.map((option) => createRollupConfig(option));
+  {
+    input: `src/index.ts`,
+    plugins: [dts()],
+    output: {
+      file: `dist/index.d.ts`,
+      format: 'es',
+    },
+  }
+]
