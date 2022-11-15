@@ -28,7 +28,8 @@
     "typescript": "^4.8.4"
   },
   "scripts": {
-    "build": "rm -rf ./dist && rollup -c",
+    "build": "rm -rf ./dist && npm run build:rollup && npm run build:types",
+    "build:rollup": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

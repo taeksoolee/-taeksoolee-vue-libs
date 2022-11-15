@@ -1,5 +1,5 @@
-import { openBlock, createElementBlock, createApp } from 'vue';
 import { defineComponent } from '@vue/composition-api';
+import { openBlock, createElementBlock } from 'vue';
 
 var script = defineComponent({
     setup() {
@@ -14,5 +14,5 @@ script.render = render;
 script.__file = "src/components/Layout/HaezoomLayout.vue";
 
 console.log('hello world');
-createApp({});
+// const app = createApp();
 //# sourceMappingURL=index.esm.mjs.map
