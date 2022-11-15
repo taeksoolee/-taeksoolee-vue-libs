@@ -7,7 +7,10 @@ const options = [
     name,
     // format: 'cjs',
     // input: pkg.source,
-    input: 'src/**/*.ts'
+    input: {
+      include: ['src/**/*.ts', 'src/**/*.vue'],
+      exclude: ['src/**/*.d.ts']
+    }
   },
   // { name, format: 'esm', 
   //   // input: pkg.source 

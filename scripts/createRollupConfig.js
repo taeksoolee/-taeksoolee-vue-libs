@@ -31,10 +31,10 @@ export function createRollupConfig(options, callback) {
       // exports: "named",
     },
     plugins: [
-      multi(),
       vuePlugin({
         
       }),
+      multi(),
       external({
         includeDependencies: [
           '@vue/composition-api',
