@@ -1,6 +1,6 @@
 console.log('hello world');
 
 export { 
-  Button,
+  CustomButton,
   HaezoomLayout
 } from './components';

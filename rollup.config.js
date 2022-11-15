@@ -6,6 +6,7 @@ import external from "rollup-plugin-peer-deps-external";
 import commonjs from '@rollup/plugin-commonjs';
 import sourcemaps from "rollup-plugin-sourcemaps";
 import typescript from "rollup-plugin-typescript2";
+import ts from "rollup-plugin-ts";
 import esbuild from 'rollup-plugin-esbuild'
 
 export default [
@@ -15,8 +16,14 @@ export default [
       vuePlugin(),
       commonjs({
         include: /\/node_modules\//,
+        extensions: ['.js', '.ts', '.vue']
       }),
-      typescript(),
+      typescript({
+        config: './tsconfig.json',
+        useTsconfigDeclarationDir: true,
+        declaration: true
+      }),
+      ts({}),
       external({
         includeDependencies: [
           'vue',
@@ -27,11 +34,12 @@ export default [
     ],
     output: [
       {
+        // preserveModules: true,
         name: 'cjs',
         file: `dist/index.cjs.js`,
         format: 'cjs',
-        sourcemap: true,
-        // exports: 'default',
+        // sourcemap: true,
+        exports: 'named',
         globals: { 
           "vue": "vue",
           "@vue/composition-api": "compositionApi",
@@ -41,38 +49,35 @@ export default [
         name: 'esm',
         file: `dist/index.esm.mjs`,
         format: 'esm',
-        sourcemap: true,
+        // sourcemap: true,
         globals: { 
           "vue": "vue",
-          "@vue/composition-api": "compositionApi",
         },
       },
       {
         name: 'umd',
         file: `dist/index.umd.js`,
         format: 'umd',
-        sourcemap: true,
+        // sourcemap: true,
         globals: { 
           "vue": "vue",
-          "@vue/composition-api": "compositionApi",
         },
       },
     ]
   },
-  {
-    input: `src/index.ts`,
-    plugins: [
-      vuePlugin(),
-      typescript(),
-      dts(),
-    ],
-    output: {
-      file: `dist/index.d.ts`,
-      format: 'cjs',
-      globals: { 
-        "vue": "vue",
-        "@vue/composition-api": "compositionApi",
-      },
-    },
-  }
+  // {
+  //   input: `src/index.ts`,
+  //   plugins: [
+  //     // typescript(),
+  //     dts(),
+  //     vuePlugin(),
+  //   ],
+  //   output: {
+  //     file: `dist/index.d.ts`,
+  //     format: 'es',
+  //     globals: { 
+  //       "vue": "vue",
+  //     },
+  //   },
+  // }
 ]

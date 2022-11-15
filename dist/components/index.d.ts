@@ -1,3 +1,3 @@
 export { HaezoomLayout } from './layout';
-export { Button } from './element';
+export { CustomButton } from './element';
 //# sourceMappingURL=index.d.ts.map

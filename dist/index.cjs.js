@@ -26,10 +26,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script.render = render;
-script.__file = "src/components/element/Button.vue";
+script.__file = "src/components/element/CustomButton.vue";
 
 console.log("hello world");
 
-exports.Button = script;
+exports.CustomButton = script;
 exports.HaezoomLayout = script$1;
-//# sourceMappingURL=index.cjs.js.map

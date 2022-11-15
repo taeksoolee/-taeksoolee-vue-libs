@@ -3,5 +3,5 @@ export {
 } from './layout'
 
 export {
-  Button
+  CustomButton
 } from './element'

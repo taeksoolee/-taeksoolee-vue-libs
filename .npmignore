@@ -1,0 +1,13 @@
+node_modules
+.git
+.gitignore
+.npmrc
+.npmignore
+public
+scripts
+example
+src
+package-lock.json
+rollup.config.*
+vue.config.js
+tsconfig.json

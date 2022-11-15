@@ -26,14 +26,13 @@
   }
 
   script.render = render;
-  script.__file = "src/components/element/Button.vue";
+  script.__file = "src/components/element/CustomButton.vue";
 
   console.log("hello world");
 
-  exports.Button = script;
+  exports.CustomButton = script;
   exports.HaezoomLayout = script$1;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-//# sourceMappingURL=index.umd.js.map

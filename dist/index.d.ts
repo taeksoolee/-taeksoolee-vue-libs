@@ -1,2 +1,2 @@
-export { Button, HaezoomLayout } from './components';
+export { CustomButton, HaezoomLayout } from './components';
 //# sourceMappingURL=index.d.ts.map

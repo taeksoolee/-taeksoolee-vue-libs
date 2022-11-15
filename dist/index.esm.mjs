@@ -22,9 +22,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script.render = render;
-script.__file = "src/components/element/Button.vue";
+script.__file = "src/components/element/CustomButton.vue";
 
 console.log("hello world");
 
-export { script as Button, script$1 as HaezoomLayout };
-//# sourceMappingURL=index.esm.mjs.map
+export { script as CustomButton, script$1 as HaezoomLayout };
