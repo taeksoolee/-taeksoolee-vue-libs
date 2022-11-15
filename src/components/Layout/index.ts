@@ -1,1 +1,1 @@
-import './HaezoomLayout.vue';
+export { default as HaezoomLayout } from "./HaezoomLayout.vue";

@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-multi-entry": "^6.0.0",
     "amazon-cognito-identity-js": "^5.2.12",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
