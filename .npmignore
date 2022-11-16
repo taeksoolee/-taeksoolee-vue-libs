@@ -11,3 +11,5 @@ package-lock.json
 rollup.config.*
 vue.config.js
 tsconfig.json
+
+.babelrc

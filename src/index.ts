@@ -1,6 +1,11 @@
 console.log('hello world');
 
 export { 
-  CustomButton,
-  HaezoomLayout
-} from './components';
+  // elements
+  HBox,
+  // forms
+  HInput,
+  HSubmitButton,
+  // layout
+  HVppLayout
+} from './components/index';

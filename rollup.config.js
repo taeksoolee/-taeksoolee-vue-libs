@@ -7,7 +7,9 @@ import commonjs from '@rollup/plugin-commonjs';
 import sourcemaps from "rollup-plugin-sourcemaps";
 import typescript from "rollup-plugin-typescript2";
 import ts from "rollup-plugin-ts";
+import styles from "rollup-plugin-styles";
 import esbuild from 'rollup-plugin-esbuild'
+
 
 export default [
   {
@@ -20,10 +22,11 @@ export default [
       }),
       typescript({
         config: './tsconfig.json',
-        useTsconfigDeclarationDir: true,
-        declaration: true
+        useTsconfigDeclarationDir: false,
+        declaration: false
       }),
       ts({}),
+      styles(),
       external({
         includeDependencies: [
           'vue',
@@ -42,7 +45,6 @@ export default [
         exports: 'named',
         globals: { 
           "vue": "vue",
-          "@vue/composition-api": "compositionApi",
         },
       },
       {

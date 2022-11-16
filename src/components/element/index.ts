@@ -1,1 +1,1 @@
-export { default as CustomButton } from './CustomButton.vue';
+export { default as HBox } from './HBox.vue';

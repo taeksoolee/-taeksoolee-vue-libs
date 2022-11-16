@@ -1,2 +1,2 @@
-export { default as HaezoomLayout } from './HaezoomLayout.vue';
+export { default as HVppLayout } from './HVppLayout.vue';
 //# sourceMappingURL=index.d.ts.map
