@@ -1,5 +1,5 @@
 {
-  "name": "haezoom-design-system",
+  "name": "@haezoom/vue-design-system",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.cjs.js",
