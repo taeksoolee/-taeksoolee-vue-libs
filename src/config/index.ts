@@ -23,12 +23,10 @@ export const initTheme: InitTheme = (options) => {
   }
 
   const colors = options?.colors ?? {};
-
   for(const k in defaultColors) {
     const type = k as ThemeType;
     const n = getColor(type);
     const v = colors[k] ? colors[k] : defaultColors[k];
-    
     document.documentElement.style.setProperty(n, v);
   }
 }

@@ -37,3 +37,35 @@ const UUIDGenerator = () => {
 }
 
 export const uuidGenerator = UUIDGenerator();
+
+
+
+
+import { Component } from "vue";
+/**
+ * Storybook Uitlity
+ */
+import { SBContext } from "../types";
+
+export const getSBTemplate = <P extends object>(config: {
+  components: { [k in string]: Component };
+  template: string;
+}) => {
+  return (args: P) => {
+    const fn = (_args: P, context: SBContext<P>) => {
+      return {
+        props: Object.keys(context.argTypes),
+        components: config.components,
+        setup() {
+          return {args}
+        },
+        template: config.template
+      };
+    };
+
+    fn.bind({});
+    fn.args = args;
+
+    return fn;
+  };
+};

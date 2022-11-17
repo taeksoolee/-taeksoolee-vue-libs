@@ -2,13 +2,22 @@
 
 $theme-type-list: 'primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark';
 
-$primary-color: var(--hds-primary-color);
-$secondary-color: var(--hds-secondary-color);
-$success-color: var(--hds-success-color);
-$info-color: var(--hds-info-color);
-$warning-color: var(--hds-warning-color);
-$danger-color: var(--hds-danger-color);
-$light-color: var(--hds-light-color);
-$dark-color: var(--hds-dark-color);
+$primary-color: var(--tds-primary-color);
+$secondary-color: var(--tds-secondary-color);
+$success-color: var(--tds-success-color);
+$info-color: var(--tds-info-color);
+$warning-color: var(--tds-warning-color);
+$danger-color: var(--tds-danger-color);
+$light-color: var(--tds-light-color);
+$dark-color: var(--tds-dark-color);
 
-$color: red;
+$theme-colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  info: $info-color,
+  warning: $warning-color,
+  danger: $danger-color,
+  light: $light-color,
+  dark: $dark-color,
+);

@@ -2,7 +2,7 @@
 import { onMounted, onBeforeUnmount, ref, PropType } from 'vue';
 import { uuidGenerator } from '../../utils';
 
-type Options = string[]
+type Options = string[];
 
 const porps = defineProps({
   options: Array as PropType<Options>,

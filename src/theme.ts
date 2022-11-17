@@ -25,4 +25,4 @@ export const ThemeTypes = {
 export type ThemeType = ListOf<typeof ThemeTypeList>;
 
 type GetColor = (type: ThemeType) => string;
-export const getColor: GetColor = type => `--${type}-color`;
+export const getColor: GetColor = type => `--tds-${type}-color`;
