@@ -1,12 +1,37 @@
-export {
-  HBox
-} from './element/index'
+import {
+  TBox,
+  TCenterBox,
+} from './element'
+
+import {
+  TButton,
+  TInput,
+  TAutoCompleteInput
+} from './forms'
+
+import {
+  TLayout1,
+} from './layout'
+
+// export const tds = {
+//   el: {
+//     TBox,
+//   },
+//   forms: {
+//     TButton,
+//     TInput
+//   },
+//   TLayout1
+// }
 
 export {
-  HSubmitButton,
-  HInput
-} from './forms/index'
-
-export {
-  HVppLayout
-} from './layout/index'
+  // elements
+  TBox,
+  TCenterBox,
+  // forms
+  TButton,
+  TInput,
+  TAutoCompleteInput,
+  // layouts
+  TLayout1,
+}

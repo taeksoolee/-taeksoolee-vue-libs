@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+$theme-type-list: 'primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark';
+
+$primary-color: var(--hds-primary-color);
+$secondary-color: var(--hds-secondary-color);
+$success-color: var(--hds-success-color);
+$info-color: var(--hds-info-color);
+$warning-color: var(--hds-warning-color);
+$danger-color: var(--hds-danger-color);
+$light-color: var(--hds-light-color);
+$dark-color: var(--hds-dark-color);
+
+$color: red;

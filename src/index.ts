@@ -1,11 +1,17 @@
 console.log('hello world');
 
 export { 
+  // tds,
+  
   // elements
-  HBox,
+  TBox,
+  TCenterBox,
   // forms
-  HInput,
-  HSubmitButton,
-  // layout
-  HVppLayout
-} from './components/index';
+  TButton,
+  TInput,
+  TAutoCompleteInput,
+  // layouts
+  TLayout1,
+} from './components';
+
+export { initTheme } from './config';

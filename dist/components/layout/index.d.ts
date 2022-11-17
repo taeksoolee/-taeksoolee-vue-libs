@@ -1,2 +1,2 @@
-export { default as HVppLayout } from './HVppLayout.vue';
+export { default as TLayout1 } from './TLayout1.vue';
 //# sourceMappingURL=index.d.ts.map

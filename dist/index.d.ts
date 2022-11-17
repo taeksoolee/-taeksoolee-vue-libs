@@ -1,2 +1,3 @@
-export { HBox, HInput, HSubmitButton, HVppLayout } from './components/index';
+export { TBox, TCenterBox, TButton, TInput, TAutoCompleteInput, TLayout1, } from './components';
+export { initTheme } from './config';
 //# sourceMappingURL=index.d.ts.map
