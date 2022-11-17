@@ -46,7 +46,7 @@ import { TBox } from '@taeksoolee/vue-design-system';
 - ⚙️ ts.config.json
 ```json
 {
-  compilerOptions: {
+  "compilerOptions": {
     "types": ["@haezoom/design-system"],
   }
 }
